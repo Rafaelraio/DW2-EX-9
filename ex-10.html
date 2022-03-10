@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action.php" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco">
+        <label for="data">Data</label>
+        <input id="data" name="data" type="date">
+        <label for="estado">Estado de origem</label>
+        <select id="estado" name="estado">
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">CE</option>
+            <option value="DF">DF</option>
+            <option value="AP">AP</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR" selected>PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select>
+        <textarea id="cursos" name="cursos" rows="5" cols="20" placeholder="Técnico Integrado em Informática, Ciência da Computação, Engenharia Ambiental, Engenharia de Alimentos, Engenharia Civil, Engenharia Eletrônica, Engenharia Química, Licenciatura em Química, Tecnologia em Alimentos."></textarea>
+        <select name="periodo" id="periodo">Periodo de Estudo
+            <option value="Diurno" selected>Diurno</option>
+            <option value="Noturno">Noturno</option>
+            <option value="Integral">Integral</option>
+        </select>
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email">
+        <select name="transporte" id="transporte">
+            <option value="a-pe">A pé</option>
+            <option value="onibus" selected>Ônibus</option>
+            <option value="bicicleta">Bicicleta</option>
+            <option value="moto">Moto</option>
+            <option value="carro">Carro</option>
+        </select>
+        <label for="ano-entrada">Ano de entrada na instituição</label>
+        <input type="number" name="ano-entrada" id="ano-entrada" min="2010" max="2021">
+        <button type="submit" value="submit">Enviar formulário</button>
+        <button type="reset" value="reset">Oh Não! Vou apagar tudo!</button>
+    </form>
+    <script>
+        window.onload = () => {
+            const naoescreva = document.getElementById("ano-entrada");
+            naoescreva.addEventListener("keypress", (event) => {
+            event.preventDefault();
+            });
+        }
+    </script>
+</body>
+</html>
