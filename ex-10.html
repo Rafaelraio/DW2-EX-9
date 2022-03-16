@@ -1,76 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EX-10</title>
-</head>
-<body>
-    <form action="/action.php" method="post">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome">
-        <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" name="endereco">
-        <label for="data">Data</label>
-        <input id="data" name="data" type="date">
-        <label for="estado">Estado de origem</label>
-        <select id="estado" name="estado">
-            <option value="AC">AC</option>
-            <option value="AL">AL</option>
-            <option value="AP">AP</option>
-            <option value="AM">AM</option>
-            <option value="BA">CE</option>
-            <option value="DF">DF</option>
-            <option value="AP">AP</option>
-            <option value="ES">ES</option>
-            <option value="GO">GO</option>
-            <option value="MA">MA</option>
-            <option value="MT">MT</option>
-            <option value="MS">MS</option>
-            <option value="MG">MG</option>
-            <option value="PA">PA</option>
-            <option value="PB">PB</option>
-            <option value="PR" selected>PR</option>
-            <option value="PE">PE</option>
-            <option value="PI">PI</option>
-            <option value="RJ">RJ</option>
-            <option value="RN">RN</option>
-            <option value="RS">RS</option>
-            <option value="RO">RO</option>
-            <option value="RR">RR</option>
-            <option value="SC">SC</option>
-            <option value="SP">SP</option>
-            <option value="SE">SE</option>
-            <option value="TO">TO</option>
-        </select>
-        <textarea id="cursos" name="cursos" rows="5" cols="20" placeholder="Técnico Integrado em Informática, Ciência da Computação, Engenharia Ambiental, Engenharia de Alimentos, Engenharia Civil, Engenharia Eletrônica, Engenharia Química, Licenciatura em Química, Tecnologia em Alimentos."></textarea>
-        <select name="periodo" id="periodo">Periodo de Estudo
-            <option value="Diurno" selected>Diurno</option>
-            <option value="Noturno">Noturno</option>
-            <option value="Integral">Integral</option>
-        </select>
-        <label for="email">E-mail</label>
-        <input type="text" id="email" name="email">
-        <select name="transporte" id="transporte">
-            <option value="a-pe">A pé</option>
-            <option value="onibus" selected>Ônibus</option>
-            <option value="bicicleta">Bicicleta</option>
-            <option value="moto">Moto</option>
-            <option value="carro">Carro</option>
-        </select>
-        <label for="ano-entrada">Ano de entrada na instituição</label>
-        <input type="number" name="ano-entrada" id="ano-entrada" min="2010" max="2021">
-        <button type="submit" value="submit">Enviar formulário</button>
-        <button type="reset" value="reset">Oh Não! Vou apagar tudo!</button>
+  </head>
+  <body>
+    <form action="/action.php" method="post" style="display: inline-grid">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome"/><br>
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" /><br>
+      <label for="data">Data:</label>
+      <input id="data" name="data" type="date" /><br>
+      <label for="estado">Estado de origem:</label>
+      <select id="estado" name="estado">
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AP">AP</option>
+        <option value="AM">AM</option>
+        <option value="BA">CE</option>
+        <option value="DF">DF</option>
+        <option value="AP">AP</option>
+        <option value="ES">ES</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MT">MT</option>
+        <option value="MS">MS</option>
+        <option value="MG">MG</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PR" selected>PR</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RS">RS</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="SC">SC</option>
+        <option value="SP">SP</option>
+        <option value="SE">SE</option>
+        <option value="TO">TO</option>
+      </select><br>
+      <label for="curso">Curso:</label>
+      <input type="text" list="cursos" id="curso" name="curso"/>
+      <datalist id="cursos">
+        <option value="Técnico Integrado em Informática"></option>
+        <option value="Ciência da Computação"></option>
+        <option value="Engenharia Ambiental"></option>
+        <option value="Engenharia de Alimentos"></option>
+        <option value="Engenharia Civil"></option>
+        <option value="Engenharia Eletrônica"></option>
+        <option value="Engenharia Química"></option>
+        <option value="Licenciatura em Química"></option>
+        <option value="Tecnologia em Alimentos"></option>
+      </datalist>
+      <p>Periodo de Estudo:</p>
+      <label for="Diurno">Diurno</label>
+      <input type="radio" id="Diurno" name="periodo" value="Diurno" /><br>
+      <label for="Noturno">Noturno</label>
+      <input type="radio" id="Noturno" name="periodo" value="Noturno" /><br>
+      <label for="Integral">Integral</label>
+      <input type="radio" id="Integral" name="periodo" value="Integral" /><br>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" />
+      <p>Meio de Transporte:</p>
+      <label for="a-pe">A pé</label>
+      <input type="checkbox" id="a-pe" name="a-pe" value="a-pe" /><br>
+      <label for="onibus">Ônibus</label>
+      <input type="checkbox" id="onibus" name="onibus" value="onibus" /><br>
+      <label for="bicicleta">Bicicleta</label>
+      <input type="checkbox" id="bicicleta" name="bicicleta" value="bicicleta"/><br>
+      <label for="moto">Moto</label>
+      <input type="checkbox" id="moto" name="moto" value="moto" /><br>
+      <label for="carro">Carro</label>
+      <input type="checkbox" id="carro" name="carro" value="carro" /><br>
+      <label for="ano-entrada">Ano de entrada na instituição:</label>
+      <input type="number" name="ano-entrada" id="ano-entrada" min="2010" max="2021"/><br>
+      <button type="submit" value="submit">Enviar formulário</button>
+      <button type="reset" value="reset">Oh Não! Vou apagar tudo!</button>
     </form>
     <script>
-        window.onload = () => {
-            const naoescreva = document.getElementById("ano-entrada");
-            naoescreva.addEventListener("keypress", (event) => {
-            event.preventDefault();
-            });
-        }
+      window.onload = () => {
+        const naoescreva = document.getElementById("ano-entrada");
+        naoescreva.addEventListener("keypress", (event) => {
+          event.preventDefault();
+        });
+      };
     </script>
-</body>
+  </body>
 </html>
